@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART WATCH</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<style>
+    .container-fluid{
+        background: rgb(7,35,93);
+        background: linear-gradient(90deg, rgba(7,35,93,1) 0%, rgba(255,0,108,1) 100%);  
+        height: 100vh;
+    }
+    #watch{
+       margin-left: -30%;
+        background-size: cover;
+        background-image: url("image/watch.png");
+        width: 600px;
+        height: 740px;
+    }
+    #screen{
+        background-color: black;
+        width: 297.7px;
+        height: 336px;
+        margin-top: 167.5px;
+        margin-left: 214px;
+        border-radius: 25%;
+        font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #battery{
+        margin-left: 160px;
+        color: green;
+        margin-top: 10px;
+    }
+    #signal{
+        margin-left: 34px;
+        color: rgb(21, 58, 182);
+    }
+    #clock{
+        font-size: 70px;
+        margin-left: 56px;
+        margin-top: 35px;
+        color: rgb(180, 182, 184);      
+    }
+    #sec{
+        color:rgb(135, 140, 145); 
+        margin-left: 110px;
+        margin-top: -10px;
+    }
+    #date{
+        margin-left: 76px;
+
+        color: rgb(135, 140, 145);     
+    }
+    #menu{
+        font-size: 30px;
+        margin-top: 70px;
+        margin-left: 35px;
+        color: rgb(180, 182, 184);
+        background: transparent;
+        border: none;
+    }
+    
+    #battery{
+        margin-left: 60px;
+        color: green;
+        margin-top: 10px;
+    }
+    #signal{
+        margin-left: 44px;
+        color: rgb(21, 58, 182);
+    }
+    #time3{
+        font-size: 10px;
+        margin-left: 76px;
+        margin-top: 35px;
+        color: rgb(180, 182, 184);      
+    }
+    #menulist{
+        position:fixed;
+        margin-left: 15px;
+        /* background-color: blue; */
+
+    }
+   
+    #menu{
+        
+        font-size: 30px;
+        margin-top: 18px;
+        margin-left: 27px;
+        color: rgb(180, 182, 184);
+        background: transparent;
+        border: none;
+    }
+   
+    #message{
+        overflow-y: scroll;
+        -webkit-border-top-left-radius: 50px;
+-webkit-border-top-right-radius: 50px;
+-moz-border-radius-topleft: 50px;
+-moz-border-radius-topright: 50px;
+border-top-left-radius: 50px;
+border-top-right-radius: 50px;
+        
+        /* background-color: brown; */
+        height: 230px;
+        
+        /* margin-left: 120px; */
+        color: rgb(189, 184, 184)
+    }
+    #message::-webkit-scrollbar{
+        display: none;
+    }
+    #list,#list1,#list2,#list3{
+        margin-left: 8px;
+        border-radius: 10px;
+        background-color: rgb(80, 78, 78);
+        width: 280px;
+        height: 30px;
+        max-height: 100px;
+        margin-top: 7px;
+
+    }
+    label{
+        margin-left: 10px;
+        color: beige;
+        font-size: 13px;
+    }
+    #msg,#msg1,#msg2,#msg3{
+        margin-left: 10px;
+        height: 30px;
+        border-radius: 7px;
+        width: 280px;
+        display: none;
+        color: aliceblue;
+        background-color: rgb(80, 78, 78);
+    }
+    a:link{
+       text-decoration: none;
+   }
+  
+
+   
+    
+</style>
+    
+</style>
+<body >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <div class="row">
+                   <div class="col-lg-12" id="watch">
+                      <div class="row" >
+                          <!-- SCREEN CONTENT -->
+                           <!-- SCREEN CONTENT -->
+                           <div  id="screen" >
+                            <i class="fa fa-signal" aria-hidden="true" id="signal"></i>
+                            <i id="time3"></i>
+                        
+                            <i class="fa fa-battery-three-quarters" aria-hidden="true" id="battery"></i>
+                           <!--MUSICS-->
+                            <div id="message">
+                                <center> <h5  >Messages</h5></center>
+                                <div id="list">
+                                    <label>Athul c</label><br>         
+                                </div>
+                                 <div id="msg">
+                                Today you may not be having class..
+                                 </div>
+
+
+                                 <div id="list1">
+                                    <label>Arun raj k t</label><br> 
+                                </div>
+                                 <div id="msg1">
+                                There will a interview @ 2 ...join 
+                                 </div>
+                                 <div id="list2">
+                                    <label>Akash</label><br> 
+                                </div>
+                                 <div id="msg2">
+                               call me fastt...asap
+                                 </div>
+                                 <div id="list3">
+                                    <label>yeshwanth</label><br> 
+                                </div>
+                                 <div id="msg3">
+                               you have won the lottery for 5lk
+                                 </div>
+
+                            </div>
+                           
+                             <div id="menulist">
+                                <a href="index.html" class="fa fa-home" id="menu" aria-hidden="true"></a>
+                                <a href="Music.html" id="menu"  class="fa fa-headphones" aria-hidden="true"></a>
+                                <a href="Message.html" id="menu" class="fa fa-commenting"  style="color: rgb(255, 255, 255);" aria-hidden="true"></a>
+                                <a href="Stopwatch.html" id="menu" class="fa fa-clock-o" aria-hidden="true"></a>
+                             </div>
+
+
+
+                          </div>
+                           <!-- SCREEN CONTENT CLOSES-->
+                      </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        setInterval(showTime, 1000);
+function showTime() {
+    console.log("time works")
+let time = new Date();
+let hour = time.getHours();
+let min = time.getMinutes();
+var currentTime=0
+hour = hour < 10 ? "0" + hour : hour;
+min = min < 10 ? "0" + min : min;
+ currentTime = hour + ":"+ min  ;
+document.getElementById("time3").innerHTML = currentTime;
+
+}
+showTime();
+         $(document).ready(function(){
+            $("#list").click(function(){
+                console.log("slide workss")
+                $("#msg").slideToggle(700)
+            }) ;
+        })
+        $(document).ready(function(){
+            $("#list1").click(function(){
+                console.log("slide workss")
+                $("#msg1").slideToggle(700)
+            }) ;
+        })
+        $(document).ready(function(){
+            $("#list2").click(function(){
+                console.log("slide workss")
+                $("#msg2").slideToggle(700)
+            }) ;
+        })
+        $(document).ready(function(){
+            $("#list3").click(function(){
+                console.log("slide workss")
+                $("#msg3").slideToggle(700)
+            }) ;
+        })
+    </script>
+</body>
+</html>

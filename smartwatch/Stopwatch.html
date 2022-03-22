@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART WATCH</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<style>
+    .container-fluid{
+        background: rgb(7,35,93);
+        background: linear-gradient(90deg, rgba(7,35,93,1) 0%, rgba(255,0,108,1) 100%);  
+        height: 100vh;
+    }
+    #watch{
+       margin-left: -30%;
+        background-size: cover;
+        background-image: url("image/watch.png");
+        width: 600px;
+        height: 740px;
+    }
+    #screen{
+        background-color: black;
+        width: 297.7px;
+        height: 336px;
+        margin-top: 167.5px;
+        margin-left: 214px;
+        border-radius: 25%;
+        font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #battery{
+        margin-left: 160px;
+        color: green;
+        margin-top: 10px;
+    }
+    #signal{
+        margin-left: 34px;
+        color: rgb(21, 58, 182);
+    }
+    #clock{
+        font-size: 70px;
+        margin-left: 56px;
+        margin-top: 35px;
+        color: rgb(180, 182, 184);      
+    }
+    #sec{
+        color:rgb(135, 140, 145); 
+        margin-left: 110px;
+        margin-top: -10px;
+    }
+    #date{
+        margin-left: 76px;
+
+        color: rgb(135, 140, 145);     
+    }
+    #menu{
+        font-size: 30px;
+        /* margin-top: 70px; */
+        margin-left: 35px;
+        color: rgb(180, 182, 184);
+        background: transparent;
+        border: none;
+    }
+    
+    #battery{
+        margin-left: 60px;
+        color: green;
+        margin-top: 10px;
+    }
+    #signal{
+        margin-left: 44px;
+        color: rgb(21, 58, 182);
+    }
+    #time2{
+        font-size: 10px;
+        margin-left: 76px;
+        margin-top: 35px;
+        color: rgb(180, 182, 184);      
+    }
+   
+    #menu{
+        font-size: 30px;
+        margin-top: 190px;
+        margin-left: 33px;
+        color: rgb(180, 182, 184);
+        background: transparent;
+        border: none;
+    }
+    #music{
+        margin-top: 10%;
+        background-color: aliceblue;
+        border-radius: 10px;
+    }
+    #message{
+        align-items: center;
+        margin-left: 120px;
+        color: rgb(189, 184, 184)
+    }
+    button {
+    /* width: 100px;
+    height: 30px; */
+    border: 3px soldi white;
+    border-radius: 50px;
+    background: #202020;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+#stopwatch {
+    font-size: 50px;
+    position: absolute;
+    margin-top: 80px;
+    transform: translate(-50%, -55%);
+    margin-left: 25px;
+}
+#buttons {
+    position: absolute;
+    margin-top: 130px;
+
+    transform: translate(-51.6%, -45%);
+}
+#buttons li {
+    display: inline;
+    padding-left: 10px;
+}
+a:link{
+       text-decoration: none;
+   }
+    
+</style>
+<body >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <div class="row">
+                   <div class="col-lg-12" id="watch">
+                      <div class="row" >
+                          <!-- SCREEN CONTENT -->
+                          <div  id="screen" >
+                            <i class="fa fa-signal" aria-hidden="true" id="signal"></i>
+                            <i id="time2"></i>
+                        
+                            <i class="fa fa-battery-three-quarters" aria-hidden="true" id="battery"></i>
+                           <!--MUSICS-->
+                            <div id="message">
+                                <h5 >Stopwatch</h5>
+                                <div id="stopwatch">
+                                    00:00:00
+                                </div>
+                        
+                                <ul id="buttons">
+                                    <li><button onclick="startTimer()">Start</button></li>
+                                    <li><button onclick="stopTimer()">Stop</button></li>
+                        
+                                    <li><button onclick="resetTimer()">Reset</button></li>
+                                </ul>
+                                
+                               
+                            </div>
+                           
+                             <div id="menulist">
+                                <a href="index.html"  class="fa fa-home" id="menu" aria-hidden="true"></a>
+                                <a href="Music.html" id="menu"  class="fa fa-headphones" aria-hidden="true"></a>
+                                <a href="Message.html"   id="menu" class="fa fa-commenting"   aria-hidden="true"></a>
+                                <button style="color: rgb(255, 255, 255);" id="menu" class="fa fa-clock-o" aria-hidden="true"></button>
+                             </div>
+
+
+
+                          </div>
+                           <!-- SCREEN CONTENT CLOSES-->
+                      </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+
+    </div>
+
+
+    <script>
+        setInterval(showTime, 1000);
+function showTime() {
+    console.log("time works")
+let time = new Date();
+let hour = time.getHours();
+let min = time.getMinutes();
+var currentTime=0
+hour = hour < 10 ? "0" + hour : hour;
+min = min < 10 ? "0" + min : min;
+ currentTime = hour + ":"+ min  ;
+document.getElementById("time2").innerHTML = currentTime;
+
+}
+showTime();
+
+const timer = document.getElementById('stopwatch');
+
+var hr = 0;
+var min = 0;
+var sec = 0;
+var stoptime = true;
+
+function startTimer() {
+  if (stoptime == true) {
+        stoptime = false;
+        timerCycle();
+    }
+}
+function stopTimer() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
+}
+
+function timerCycle() {
+    if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    hr = parseInt(hr);
+
+    sec = sec + 1;
+
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
+
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+    if (hr < 10 || hr == 0) {
+      hr = '0' + hr;
+    }
+
+    timer.innerHTML = hr + ':' + min + ':' + sec;
+
+    setTimeout("timerCycle()", 1000);
+  }
+}
+
+function resetTimer() {
+    timer.innerHTML = "00:00:00";
+    stoptime = true;
+    hr = 0;
+    sec = 0;
+    min = 0;
+}
+    </script>
+    
+</body>
+</html>

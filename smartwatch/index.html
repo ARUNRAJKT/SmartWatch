@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART WATCH</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<style>
+    .container-fluid{
+        background: rgb(7,35,93);
+        background: linear-gradient(90deg, rgba(7,35,93,1) 0%, rgba(255,0,108,1) 100%);  
+        height: 100vh;
+    }
+    #watch{
+       margin-left: -30%;
+        background-size: cover;
+        background-image: url("image/watch.png");
+        width: 600px;
+        height: 740px;
+    }
+    #screen{
+        background-color: black;
+        width: 297.7px;
+        height: 336px;
+        margin-top: 167.5px;
+        margin-left: 214px;
+        border-radius: 25%;
+        font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #battery{
+        margin-left: 160px;
+        color: green;
+        margin-top: 10px;
+    }
+    #signal{
+        margin-left: 34px;
+        color: rgb(21, 58, 182);
+    }
+    #clock{
+        font-size: 70px;
+        margin-left: 56px;
+        margin-top: 35px;
+        color: rgb(245, 245, 245);      
+    }
+    #sec{
+        color:rgb(135, 140, 145); 
+        margin-left: 110px;
+        margin-top: -10px;
+    }
+    #date{
+        margin-left: 76px;
+
+        color: rgb(135, 140, 145);     
+    }
+    #menu{
+        font-size: 30px;
+        margin-top: 67px;
+        margin-left: 35px;
+        color: rgb(180, 182, 184);
+        background: transparent;
+        border: none;
+    }
+    #menulist{
+        position:fixed;
+        margin-left: 15px;
+        /* background-color: blue; */
+
+    }
+   
+    a:link{
+       text-decoration: none;
+   }
+    
+   
+    
+</style>
+<body >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <div class="row">
+                   <div class="col-lg-12" id="watch">
+                      <div class="row" >
+                          <!-- SCREEN CONTENT -->
+                          <div class="col-lg-12" id="screen" >
+                            <i class="fa fa-signal" aria-hidden="true" id="signal"></i>
+                        
+                            <i class="fa fa-battery-three-quarters" aria-hidden="true" id="battery"></i>
+                            <div id="clock">
+                                <!--TIME-->
+                            </div>
+                            <div id="sec">
+
+                            </div>
+
+                            <div id="date">
+
+                            </div>
+                             <div id="menulist">
+                                <a href="Music.html" id="menu"  class="fa fa-headphones" ></button>
+                                <a href="Message.html"   id="menu" class="fa fa-commenting" ></a>
+                                <a href="Stopwatch.html" id="menu" class="fa fa-clock-o"></a>
+                             </div>
+
+
+
+                          </div>
+                           <!-- SCREEN CONTENT CLOSES-->
+                      </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+
+    </div>
+
+
+    <script src="index.js">
+       
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+    "music":[
+        {
+            "title":"Bheeshma Parwam",
+            "author":"Athul Chonadath",
+            "file":"song1.mpeg",
+            "img":"1img.jpg"
+        },
+        {
+            "title":"Neerolum mele ninte nin kangalil",
+            "author":"yeshwanth nivas",
+            "file":"song2.mpeg",
+            "img":"2img.jpg"
+        },
+        {
+            "title":"Parayuvan-ISHQ",
+            "author":"Arun raj",
+            "file":"song3.mpeg",
+            "img":"3img.jpg"
+        },
+        {
+            "title":"Kannana Kanne",
+            "author":"A R Rahman",
+            "file":"song4.mpeg",
+            "img":"4img.jpg"
+        }
+    ]
+}
